@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 import Header from '../Others/Header'
 import CreateTask from '../Others/CreateTask'
 import AllTasks from '../Others/AllTasks'
@@ -11,6 +11,10 @@ const AdminDashboard = (props) => {
         <AllTasks />
     </div>
   )
+}
+
+AdminDashboard.propTypes = {
+  changeUser: PropTypes.func.isRequired,
 }
 
 export default AdminDashboard
