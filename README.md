@@ -11,12 +11,11 @@ A modern and efficient **team and task management system** built with React, Vit
 ## Features
 
 - **Admin Dashboard**:
-  - Add, update, and delete team members.
   - Assign tasks to team members.
   - View all tasks and their statuses.
 - **Team Member Dashboard**:
   - View assigned tasks.
-  - Update task status (e.g., "In Progress", "Completed").
+  - Update task status (e.g., "Active", "Completed", etc).
 - **Task Management**:
   - Admins can assign tasks to specific team members.
   - Team members can update task statuses.
@@ -82,13 +81,12 @@ To get started with the project, follow these steps:
 ## Usage
 
 ### Admin Dashboard
-- **Add Team Members**: Admins can add new team members with details like name, email, and role.
 - **Assign Tasks**: Admins can assign tasks to specific team members with a title, description, and deadline.
 - **View Tasks**: Admins can see all tasks and their current statuses.
 
 ### Team Member Dashboard
 - **View Assigned Tasks**: Team members can see tasks assigned to them.
-- **Update Task Status**: Team members can update the status of their tasks (e.g., "Not Started", "In Progress", "Completed").
+- **Update Task Status**: Team members can update the status of their tasks (e.g., "Failed", "Active", "Completed").
 
 ---
 
@@ -103,5 +101,3 @@ The application uses **localStorage** to persist team member and task data. This
 The **React Context API** is used to manage global state, such as team member and task data, across the application. This provides a clean and efficient way to share state between components.
 
 ---
-
-Let me know if you need further adjustments! 😊
