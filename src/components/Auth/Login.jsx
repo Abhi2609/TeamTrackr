@@ -1,18 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import { useState } from "react"
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const Login = ({handleLogin}) => {
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   const submitHandler = (e) => {
-    e.preventDefault();
-    console.log("email: ", email);
-    console.log("password: ", password);
-    console.log("Submitted");
+    e.preventDefault()
+    
+    handleLogin(email, password)
 
-    setEmail("");
-    setPassword("");
+    setEmail("")
+    setPassword("")
   };
 
   return (
@@ -20,14 +19,14 @@ const Login = () => {
       <div className="border-2 border-emerald-600 p-20 rounded-xl">
         <form
           onSubmit={(e) => {
-            submitHandler(e);
+            submitHandler(e)
           }}
           className="flex flex-col items-center justify-center"
         >
           <input
             value={email}
             onChange={(e) => {
-              setEmail(e.target.value);
+              setEmail(e.target.value)
             }}
             required
             className="border-2 border-emerald-600 text-xl text-white outline-none font-medium bg-transparent rounded-full py-2 px-6 placeholder:text-gray-400"
@@ -38,7 +37,7 @@ const Login = () => {
           <input
             value={password}
             onChange={(e) => {
-              setPassword(e.target.value);
+              setPassword(e.target.value)
             }}
             required
             className="border-2 border-emerald-600 text-xl text-white outline-none font-medium bg-transparent rounded-full py-2 px-6 mt-3 placeholder:text-gray-400"
@@ -52,7 +51,7 @@ const Login = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
